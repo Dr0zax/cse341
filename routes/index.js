@@ -1,8 +1,6 @@
-import { Router } from "express";
-import { baseController } from "../controllers/index.js";
+const express = require("express");
+const router = express.Router();
 
-const routes = Router();
+router.use("/contacts", require("./contacts"));
 
-routes.get("/", baseController.getName);
-
-export default routes;
+module.exports = router;

@@ -1,11 +1,22 @@
-import express from "express";
-import routes from "./routes/index.js";
+const express = require("express");
+const mongodb = require("./db/connect");
 
 const app = express();
+const port = process.env.PORT || 3000;
 
-app.use("/", routes);
+app.use(express.json());
+app.use((req,res,next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    next();
+});
 
-const port = 3000;
-app.listen(process.env.PORT || port, () => {
-    console.log(`Web server is running at http://127.0.0.1:${process.env.PORT || port}`);
+app.use("/", require("./routes"));
+
+mongodb.mongoConnect((err, mongodb) => {
+    if (err) {
+        console.log(err);
+    } else {
+        app.listen(port)
+        console.log(`Server is running on http://localhost:${port}`);
+    }
 });

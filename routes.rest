@@ -1,0 +1,22 @@
+// LOCALHOST
+
+GET http://127.0.0.1:3000/ HTTP/1.1
+
+###
+
+GET http://127.0.0.1:3000/contacts HTTP/1.1
+
+###
+
+GET http://127.0.0.1:3000/contacts/68d8c0b2449b614205fec38b HTTP/1.1
+
+###
+GET http://127.0.0.1:3000/contacts/68d8c0d4449b614205fec38c HTTP/1.1
+
+###
+
+GET http://127.0.0.1:3000/contacts/68d8c0de449b614205fec38d HTTP/1.1
+
+// PRODUCTION
+
+
