@@ -54,7 +54,7 @@ GET https://cse341jeppesen.onrender.com/contacts/68d8c0d4449b614205fec38c HTTP/1
 GET https://cse341jeppesen.onrender.com/contacts/68d8c0de449b614205fec38d HTTP/1.1
 
 ### create new contact
-POST https://cse341jeppesen.onrender.com/contacts/contacts HTTP/1.1 
+POST https://cse341jeppesen.onrender.com/contacts/ HTTP/1.1 
 content-type: application/json
 
 {
@@ -73,9 +73,9 @@ Content-Type: application/json
     "firstName": "Alisha",
     "lastName": "Jeppesen",
     "email": "bestMom@gmail.com",
-    "favoriteColor": "green",
+    "favoriteColor": "blue",
     "birthday": "05/14/1975"
 }
 
 ### delete contact
-DELETE https://cse341jeppesen.onrender.com/contacts/68e18d3e37c5f02a277d87d2 HTTP/1.1
+DELETE https://cse341jeppesen.onrender.com/contacts/68e191018b81252e3aea40d1 HTTP/1.1
