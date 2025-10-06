@@ -1,5 +1,5 @@
-const mongodb = require("../db/connect");
-const ObjectId = require('mongodb').ObjectId;
+import * as mongodb from "../db/connect.js";
+import ObjectId from 'mongodb';
 
 const getAll = async (req, res, next) => {
     try {
@@ -73,4 +73,4 @@ const remove = async (req, res) => {
     res.status(204).json(result);
 };
 
-module.exports = { getAll, getSingle, create, update, remove };
+export default { getAll, getSingle, create, update, remove };

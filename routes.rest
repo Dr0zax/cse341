@@ -37,7 +37,7 @@ Content-Type: application/json
 }
 
 ### delete contact
-DELETE http://127.0.0.1:3000/contacts/68e18d3e37c5f02a277d87d2 HTTP/1.1
+DELETE http://127.0.0.1:3000/contacts/68e19bb24fa745c14d3d10fb HTTP/1.1
 
 // PRODUCTION
 
@@ -78,4 +78,4 @@ Content-Type: application/json
 }
 
 ### delete contact
-DELETE https://cse341jeppesen.onrender.com/contacts/68e191018b81252e3aea40d1 HTTP/1.1
+DELETE https://cse341jeppesen.onrender.com/contacts/68e19c1b83f70f0f5b7a3ce5 HTTP/1.1
