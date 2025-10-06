@@ -1,6 +1,8 @@
-const express = require("express");
+import express from 'express';
+import contacts from './contacts.js'
 const router = express.Router();
 
-router.use("/contacts", require("./contacts"));
+// Mount the contacts router (contacts exports the router directly)
+router.use("/contacts", contacts);
 
-module.exports = router;
+export default router;

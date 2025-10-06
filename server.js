@@ -1,5 +1,8 @@
-const express = require("express");
-const mongodb = require("./db/connect");
+// const express = require("express");
+// const mongodb = require("./db/connect");
+import express from 'express'
+import connect from './db/connect.js'
+import routes from './routes/index.js'
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -10,9 +13,9 @@ app.use((req,res,next) => {
     next();
 });
 
-app.use("/", require("./routes"));
+app.use("/", routes);
 
-mongodb.mongoConnect((err, mongodb) => {
+connect.mongoConnect((err, mongodb) => {
     if (err) {
         console.log(err);
     } else {
