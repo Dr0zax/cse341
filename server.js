@@ -1,10 +1,12 @@
 import express from 'express'
 import connect from './db/connect.js'
 import routes from './routes/index.js'
+import cors from 'cors';
 
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(cors());
 app.use(express.json());
 app.use((req,res,next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
