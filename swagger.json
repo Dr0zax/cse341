@@ -5,7 +5,7 @@
     "description": "This is the API documentation for my application.",
     "version": "1.0.0"
   },
-  "host": "cse341jeppesen.onrender.com",
+  "host": "localhost:8080",
   "basePath": "/",
   "schemes": [
     "http"

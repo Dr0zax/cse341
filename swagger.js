@@ -5,11 +5,11 @@ const doc = {
         title: 'API Documentation',
         description: 'This is the API documentation for my application.',
     },
-    host: 'cse341jeppesen.onrender.com',
+    host: 'localhost:8080',
     schemes: ['http'],
 };
 
 const outputFile = './swagger.json';
 const routes = ['./routes/index.js'];
 
-swaggerAutogen(outputFile, routes, doc);
+swaggerAutogen()(outputFile, routes, doc);
