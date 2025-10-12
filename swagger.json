@@ -11,9 +11,19 @@
     "http"
   ],
   "paths": {
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/contacts/": {
       "get": {
-        "description": "Returns a list of all contacts.",
+        "description": "",
         "produces": [
           "application/json"
         ],
@@ -27,7 +37,7 @@
         }
       },
       "post": {
-        "description": "Creates a new contact.",
+        "description": "",
         "parameters": [
           {
             "name": "body",
@@ -66,7 +76,7 @@
     },
     "/contacts/{id}": {
       "get": {
-        "description": "Returns a contact by ID.",
+        "description": "",
         "produces": [
           "application/json"
         ],
@@ -91,7 +101,7 @@
         }
       },
       "put": {
-        "description": "Updates a contact by ID.",
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -134,7 +144,7 @@
         }
       },
       "delete": {
-        "description": "Deletes a contact by ID.",
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -146,6 +156,9 @@
         "responses": {
           "204": {
             "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
