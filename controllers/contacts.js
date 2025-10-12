@@ -1,5 +1,5 @@
 import * as mongodb from "../db/connect.js";
-import ObjectId from 'mongodb';
+import { ObjectId } from "mongodb";
 
 const getAll = async (req, res, next) => {
     try {
@@ -67,10 +67,15 @@ const update = async (req, res) => {
 };
 
 const remove = async (req, res) => {
-    const db = mongodb.getDb();
-    const contactId = new ObjectId(req.params.id);
-    const result = await db.collection("contacts").deleteOne({ _id: contactId }, true);
-    res.status(204).json(result);
+    try {
+        const db = mongodb.getDb();
+        const contactId = new ObjectId(req.params.id);
+        await db.collection("contacts").deleteOne({ _id: contactId });
+        // 204 No Content should not send a JSON body
+        res.status(204).send();
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
 };
 
 export default { getAll, getSingle, create, update, remove };

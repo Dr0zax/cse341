@@ -1,5 +1,3 @@
-// const express = require("express");
-// const mongodb = require("./db/connect");
 import express from 'express'
 import connect from './db/connect.js'
 import routes from './routes/index.js'
